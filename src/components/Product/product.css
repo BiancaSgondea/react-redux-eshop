@@ -1,0 +1,34 @@
+.product-container{
+    padding-top: 30px;
+    display: flex;
+    justify-content: center;
+}
+
+.card-container{
+    padding: 10px;
+    border-radius: 0;
+    max-width: 300px;
+    transition: transform .2s;
+
+}
+.card-container:hover {
+    transform: scale(1.02);
+    box-shadow: 2px 5px rgb(231, 231, 231);
+}
+
+.product-image{
+    max-width: 70%;
+    margin: 0 auto;
+}
+.product-name{
+    color: lightgray;
+    font-weight: 600;
+    font-size: 1em;
+}
+.product-qty{
+background-color: white !important;
+}
+.product-qty:focus{
+box-shadow: none;
+border-color: #ced4da;
+}
