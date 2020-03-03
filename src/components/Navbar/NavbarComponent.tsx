@@ -1,10 +1,9 @@
 import React from "react";
-import Navbar from 'react-bootstrap/Navbar'
-import Button from 'react-bootstrap/Button'
-import { Link } from "react-router-dom";
-import { AppState } from "../../store";
-import { Product } from "../../types/Product";
-import { connect } from "react-redux";
+import Navbar from "react-bootstrap/Navbar"
+import { Link } from "react-router-dom"
+import { AppState } from "../../store"
+import { Product } from "../../types/Product"
+import { connect } from "react-redux"
 
 
 interface NavbarProps {

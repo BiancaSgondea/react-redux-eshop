@@ -1,8 +1,1 @@
-body{
-    padding-top: 30px;
-}
 
-
-@import './components/Product/product.css';
-@import './components/Navbar/navbar.css';
-@import './components/Cart/cart.css';

@@ -1,18 +1,14 @@
-import React from 'react'
-import { bindActionCreators } from "redux";
-import { ThunkDispatch } from "redux-thunk";
-import { connect } from "react-redux";
-
-import { getProducts } from '../../actions/products'
-import { Product } from '../../types/Product'
-import { AppActions } from "../../types/actions";
-
-import { AppState } from '../../store'
-
+import React from "react"
+import "../Cart/cart.css"
+import { bindActionCreators } from "redux"
+import { ThunkDispatch } from "redux-thunk"
+import { connect } from "react-redux"
+import { getProducts } from "../../actions/products"
+import { Product } from "../../types/Product"
+import { AppActions } from "../../types/actions"
+import { AppState } from "../../store"
 import Container from "react-bootstrap/Container"
 import Table from "react-bootstrap/Table"
-
-
 
 interface CartProps {
 }
@@ -23,8 +19,6 @@ interface CartState {
 type Props = CartProps & LinkStateProps & LinkDispatchProps
 
 class ProductList extends React.Component<Props, CartState>{
-
-
 
     render() {
         const { cart } = this.props
@@ -43,7 +37,7 @@ class ProductList extends React.Component<Props, CartState>{
                             <th>Brand</th>
                             <th>Price</th>
                             <th>Qty</th>
-                            <th>Total</th><th />
+                            <th>Total</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -59,7 +53,7 @@ class ProductList extends React.Component<Props, CartState>{
                             </tr>
                         ))}
                         <tr>
-                            <td colSpan={7}><b>Total: {totalPrice}</b></td>
+                            <td colSpan={7} ><h2 className="cart-total">Total: {totalPrice} DKK</h2></td>
                         </tr>
                     </tbody>
                 </Table>}

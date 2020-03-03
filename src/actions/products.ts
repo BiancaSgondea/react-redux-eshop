@@ -8,9 +8,9 @@ import {
 import { Dispatch } from "redux";
 import { AppState } from "../store";
 
-export const getProductsBegin = (message: string): AppActions => ({
+export const getProductsBegin = (loading:boolean): AppActions => ({
   type: GET_PRODUCTS_BEGIN,
-  payload: message
+  loading
 });
 export const getProductsSuccess = (products: Product[]): AppActions => ({
   type: GET_PRODUCTS_SUCCESS,
@@ -18,18 +18,18 @@ export const getProductsSuccess = (products: Product[]): AppActions => ({
 });
 export const getProductsFail = (error: string): AppActions => ({
   type: GET_PRODUCTS_FAIL,
-  payload: error
+  error
 });
 
 export const getProducts = () => {
   return (dispatch: Dispatch<AppActions>, getState: () => AppState) => {
+    dispatch(getProductsBegin(true))
     fetch(
       "https://bojwbhw97e.execute-api.us-east-2.amazonaws.com/Production/eshop-challenge/products"
     )
       .then(response => response.json())
       .then(response => {
         dispatch(getProductsSuccess(response.body));
-        console.log(response);
       })
       .catch(error => {
         dispatch(getProductsFail(error.toString()));

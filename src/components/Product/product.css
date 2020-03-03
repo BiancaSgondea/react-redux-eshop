@@ -1,4 +1,8 @@
-.product-container{
+.product-list-conatiner{
+    padding-top: 40px;
+}
+
+.products-container{
     padding-top: 30px;
     display: flex;
     justify-content: center;
@@ -13,7 +17,7 @@
 }
 .card-container:hover {
     transform: scale(1.02);
-    box-shadow: 2px 5px rgb(231, 231, 231);
+    box-shadow: 2px 5px rgb(241, 240, 240);
 }
 
 .product-image{
